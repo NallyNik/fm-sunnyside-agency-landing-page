@@ -1,0 +1,181 @@
+@use 'global';
+
+header {
+    position: relative;
+    height: 30rem;
+    padding: 2rem 1rem;
+
+    background: center url('../images/mobile/image-header.jpg') no-repeat;
+    background-size: cover;
+    color: global.$white;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 6rem;
+    height: 1rem;
+}
+button {
+    width: 2rem;
+    height: 2rem;
+
+    background: center url('../images/icon-hamburger.svg') no-repeat;
+    border: none;
+}
+.menu {
+    position: absolute;
+    opacity: 0;
+    top: 5rem;
+    right: 1rem;
+    left: 1rem;
+
+    width: 18rem;
+    padding: 2rem 5rem;
+
+    background-color: global.$white;
+    color: global.$grayish-blue;
+    font-weight: bold;
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -15px;
+        right: 0;
+
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid global.$white;
+    }
+    
+    li {
+        padding: 1rem;
+    }
+    li:hover {
+        font-family: 'Fraunces', serif;
+        text-transform: uppercase;
+        color: global.$very-dark-desaturated-blue;
+        background-color: global.$yellow;
+        border-radius: 2rem;
+    }
+}
+.menu-open {
+    opacity: 1;
+}
+.header__bottom {
+    margin-top: 4rem;
+
+    text-transform: uppercase;
+}
+
+.section-1, .section-2 {
+    display: grid;
+    line-height: 1.5;
+
+    background-size: cover;
+}
+.img-transform, .img-stand {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+}
+.img-transform {
+    background: url('../images/mobile/image-transform.jpg') no-repeat;
+}
+.img-stand {
+    background: url('../images/mobile/image-stand-out.jpg') no-repeat;
+}
+.transform, .stand {
+    height: fit-content;
+    padding: 3rem 0;
+}
+.graphic, .photography {
+    height: 50rem;
+    padding: 40rem 0 3rem;
+}
+.graphic {
+    color: global.$dark-desaturated-cyan;
+    background: url('../images/mobile/image-graphic-design.jpg') no-repeat;
+}
+.photography {
+    color: global.$dark-blue;
+    background: url('../images/mobile/image-photography.jpg') no-repeat;
+}
+
+.section-2 {
+    h2 {
+        color: global.$grayish-blue;
+        text-transform: uppercase;
+    }
+}
+.person {
+    padding-top: 3rem;
+    @extend %flex-column;
+    gap: 1rem;
+}
+.avatar {
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+}
+h3 {
+    font-weight: bold;
+}
+.job {
+    color: global.$grayish-blue;
+}
+
+footer {
+    padding: 3rem 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+figure {
+    width: 23.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-size: cover;
+}
+.footer__bottom {
+    padding: 3rem 1rem;
+    @extend %flex-column;
+    gap: 2rem;
+    
+    background-color: global.$dark-moderate-cyan;
+    
+    a {
+        color: global.$dark-desaturated-cyan;
+    }
+}
+:is(.anchors, .social-media) ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+@media (min-width: 1000px) {
+    header {
+        background: url('../images/desktop/image-header.jpg') no-repeat;
+    }
+    .img-transform {
+        background: url('../images/desktop/image-transform.jpg') no-repeat;
+    }
+    .img-stand {
+        background: url('../images/desktop/image-stand-out.jpg') no-repeat;
+    }
+    .graphic {
+        background: url('../images/desktop/image-graphic-design.jpg') no-repeat;
+    }
+    .photography {
+        background: url('../images/desktop/image-photography.jpg') no-repeat;
+    }
+}
