@@ -25,11 +25,17 @@ $white: hsl(0, 0%, 100%);
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+}
+
+h1, h2, h3, p {
     text-align: center;
 }
-h1, h2 {
+h1, h2, h3, a {
     font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: $very-dark-desaturated-blue;
 }
 p, li {
     font-family: 'Barlow', sans-serif;
+    line-height: 1.5;
 }
