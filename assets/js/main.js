@@ -1,5 +1,5 @@
 const btn = document.getElementById('menu-button');
-const menu = document.getElementById('menu');
+const menu = document.getElementById('header-menu');
 
 btn.addEventListener('click', () => {
     const isOpen = menu.classList.contains('menu-open');
